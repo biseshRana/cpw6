@@ -1,0 +1,371 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Loading State */
+.loading-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eff6ff, #faf5ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #4b5563;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eff6ff, #faf5ff);
+  padding: 24px;
+}
+
+.dashboard-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #4b5563;
+  font-size: 16px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 24px;
+}
+
+.stat-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.stat-subtitle {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.stat-blue {
+  color: black;
+}
+
+.stat-red {
+  color: black;
+}
+
+.stat-green {
+  color: black;
+}
+
+.stat-purple {
+  color: black;
+}
+
+.stat-orange {
+  color: black;
+}
+
+.stat-icon {
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.icon-blue {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.icon-red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.icon-green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+/* Filters Card */
+.filters-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-range {
+  width: 100%;
+  cursor: pointer;
+}
+
+.filter-results {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Table Card */
+.table-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.pokemon-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pokemon-table thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.pokemon-table th {
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pokemon-table tbody {
+  background: white;
+}
+
+.pokemon-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.pokemon-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.pokemon-table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.pokemon-cell {
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-sprite {
+  width: 48px;
+  height: 48px;
+}
+
+.pokemon-info {
+  margin-left: 12px;
+}
+
+.pokemon-name {
+  font-weight: 500;
+  color: #1f2937;
+  text-transform: capitalize;
+}
+
+.pokemon-id {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.types-cell {
+  display: flex;
+  gap: 4px;
+}
+
+.type-badge {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  text-transform: capitalize;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-table {
+    font-size: 12px;
+  }
+
+  .pokemon-table th,
+  .pokemon-table td {
+    padding: 8px 12px;
+  }
+}
+
+body{
+  justify-content: center;
+  align-items: center;
+}
